@@ -33,7 +33,12 @@ namespace ConsoleApp3
 
             #endregion
 
-            printBookTilte("CleanCode");
+            //printBookTilte("CleanCode");
+            int pages = 400;
+
+            AddBounsPages(pages);
+
+            Console.WriteLine(pages);
         }
         #region Question03  
 
@@ -47,15 +52,27 @@ namespace ConsoleApp3
 
         //4-Write a method PrintBookTitle(string title) that prints "Book title: " + title.Call it with "Clean Code".
 
-        private static void printBookTilte(string title)
-        {
-            Console.WriteLine("Book Title" + title);
-        }
-        
+        //private static void printBookTilte(string title)
+        //{
+        //    Console.WriteLine("Book Title" + title);
+        //}
+
 
         #endregion
 
 
+
+
+        #region Question05
+        //5-Write a method AddBonusPages(int pages) that adds 50 to pages.Call it with a variable int pages = 400; and print pages afterward.What do you expect to see, and why?
+
+        private static void AddBounsPages(int pages)
+        {
+            pages = pages + 50;
+        }
+
+
+        #endregion
 
 
 
