@@ -34,11 +34,15 @@ namespace ConsoleApp3
             #endregion
 
             //printBookTilte("CleanCode");
-            int pages = 400;
+            //int pages = 400;
 
-            AddBounsPages(pages);
+            //AddBounsPages(pages);
 
-            Console.WriteLine(pages);
+            //Console.WriteLine(pages);
+
+            double [] prices = {25.5 , 40.0};
+            ApplyDiscount(prices);
+            Console.WriteLine(prices[0]);
         }
         #region Question03  
 
@@ -66,15 +70,28 @@ namespace ConsoleApp3
         #region Question05
         //5-Write a method AddBonusPages(int pages) that adds 50 to pages.Call it with a variable int pages = 400; and print pages afterward.What do you expect to see, and why?
 
-        private static void AddBounsPages(int pages)
-        {
-            pages = pages + 50;
-        }
+        //private static void AddBounsPages(int pages)
+        //{
+        //    pages = pages + 50;
+        //}
 
 
         #endregion
 
 
 
+        #region Question06
+
+        //6-Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to see, and why?
+
+        private static void ApplyDiscount(double[] prices)
+        {
+            prices[0] = prices[0] - 5;
+        }
+
+
+
+
+        #endregion
     }
 }
