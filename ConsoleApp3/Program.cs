@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Drawing;
+using System.Reflection;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ConsoleApp3
@@ -66,9 +67,10 @@ namespace ConsoleApp3
             //    Console.WriteLine(price);
             //}
 
-            printBookInfo("Clean Code");
-            printBookInfo("The Pragmatic Programmer", 352);
+            //printBookInfo("Clean Code");
+            //printBookInfo("The Pragmatic Programmer", 352);
 
+            PrintBookInfo(pages: 464, title: "Clean Code");
         }
         #region Question03  
 
@@ -161,11 +163,26 @@ namespace ConsoleApp3
 
         #region Question10
 
-        public static void printBookInfo(string title , int pages = 300)
+        //public static void printBookInfo(string title , int pages = 300)
+        //{
+        //    Console.WriteLine("Title:" + title);
+        //    Console.WriteLine("Pages:" + pages);    
+        //}
+
+        #endregion
+
+
+        #region Question11
+
+        //11-Using the PrintBookInfo method from the question above, call it by naming the parameters, passing pages before title.
+
+        static void PrintBookInfo(string title, int pages = 300)
         {
-            Console.WriteLine("Title:" + title);
-            Console.WriteLine("Pages:" + pages);    
+            Console.WriteLine("Title: " + title);
+            Console.WriteLine("Pages: " + pages);
         }
+
+
 
         #endregion
     }
