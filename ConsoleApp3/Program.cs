@@ -59,12 +59,16 @@ namespace ConsoleApp3
 
             //Console.WriteLine(prices.Length);
 
-            double price;
+            //double price;
 
-            if (TryGetPrice("Clean Code", out price))
-            {
-                Console.WriteLine(price);
-            }
+            //if (TryGetPrice("Clean Code", out price))
+            //{
+            //    Console.WriteLine(price);
+            //}
+
+            printBookInfo("Clean Code");
+            printBookInfo("The Pragmatic Programmer", 352);
+
         }
         #region Question03  
 
@@ -143,16 +147,26 @@ namespace ConsoleApp3
         #region Question09
         //9-Write a method bool TryGetPrice(string title, out double price) that returns true and sets price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it  and print the price if found
 
-        public static bool TryGetPrice(string title , out double price)
+        //public static bool TryGetPrice(string title , out double price)
+        //{
+        //    if(title == "Clean Code")
+        //    {
+        //        price = 25.5;
+        //        return true;
+        //    }
+        //    price = 0;
+        //    return false;
+        //}
+        #endregion
+
+        #region Question10
+
+        public static void printBookInfo(string title , int pages = 300)
         {
-            if(title == "Clean Code")
-            {
-                price = 25.5;
-                return true;
-            }
-            price = 0;
-            return false;
+            Console.WriteLine("Title:" + title);
+            Console.WriteLine("Pages:" + pages);    
         }
+
         #endregion
     }
 }
