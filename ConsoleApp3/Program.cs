@@ -1,4 +1,6 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Diagnostics;
+using System.Drawing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ConsoleApp3
 {
@@ -44,11 +46,18 @@ namespace ConsoleApp3
             //ApplyDiscount(prices);
             //Console.WriteLine(prices[0]);
 
-            int pages = 400;
+            //int pages = 400;
 
-            AddBounsPagesRef(ref pages);
+            //AddBounsPagesRef(ref pages);
 
-            Console.WriteLine(pages);
+            //Console.WriteLine(pages);
+
+
+            double[] prices = { 25.5, 40.0 };
+
+            ReplaceArray(ref prices);
+
+            Console.WriteLine(prices.Length);
         }
         #region Question03  
 
@@ -104,16 +113,24 @@ namespace ConsoleApp3
         #region Question07
 
         //7-Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref. Call it and print pages afterward.How is the result different from question 5?
-        private static void AddBounsPagesRef(ref int pages)
-        {
-            pages = pages + 50;
-        }
+        //private static void AddBounsPagesRef(ref int pages)
+        //{
+        //    pages = pages + 50;
+        //}
 
 
         #endregion
 
 
+        #region Question08
 
+        //8-Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length afterward.
+
+        private static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] {10.0 , 12.5 , 15.0};
+        }
+        #endregion
 
 
     }
