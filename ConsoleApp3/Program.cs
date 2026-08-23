@@ -33,7 +33,7 @@ namespace ConsoleApp3
 
             #endregion
         }
-        #region Question02  
+        #region Question03  
 
         //private static void PrintWelcomeMessage()
         //{
