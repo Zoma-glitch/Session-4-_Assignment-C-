@@ -70,7 +70,8 @@ namespace ConsoleApp3
             //printBookInfo("Clean Code");
             //printBookInfo("The Pragmatic Programmer", 352);
 
-            PrintBookInfo(pages: 464, title: "Clean Code");
+            //PrintBookInfo(pages: 464, title: "Clean Code");
+            PrintAllTitles("Clean Code", "Js", "C#");
         }
         #region Question03  
 
@@ -176,14 +177,30 @@ namespace ConsoleApp3
 
         //11-Using the PrintBookInfo method from the question above, call it by naming the parameters, passing pages before title.
 
-        static void PrintBookInfo(string title, int pages = 300)
-        {
-            Console.WriteLine("Title: " + title);
-            Console.WriteLine("Pages: " + pages);
-        }
+        //static void PrintBookInfo(string title, int pages = 300)
+        //{
+        //    Console.WriteLine("Title: " + title);
+        //    Console.WriteLine("Pages: " + pages);
+        //}
 
 
 
         #endregion
+
+        #region Question12
+        //12-Write a method PrintAllTitles(params string[] titles) that prints each title on its own line. Call it with three book titles.
+
+        static void PrintAllTitles(params string[] titles)
+        {
+            foreach (string title in titles)
+            {
+                Console.WriteLine(title);
+            }
+        }
+
+        #endregion
+
+
+
     }
 }
